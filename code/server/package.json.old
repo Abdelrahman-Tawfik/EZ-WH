@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "dayjs": "^1.11.2",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.0",
+    "morgan": "^1.10.0",
+    "sqlite3": "^5.0.8"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "jest": "^27.5.1",
+    "mocha": "^9.2.2"
+  },
+  "scripts": {
+    "prestart": "node DBCheck.js",
+    "start": "node server.js",
+    "preapiTest" : "node DBCheck.js",
+    "apiTest": "./node_modules/.bin/mocha test --exit",
+    "test": "node_modules/.bin/jest --runInBand"
+  }
+}
